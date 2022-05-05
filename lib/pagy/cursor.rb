@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "cursor/version"
+require_relative 'cursor/version'
 
 module Pagy
   module Cursor
