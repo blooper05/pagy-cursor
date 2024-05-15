@@ -1,4 +1,9 @@
 ---
+require:
+  - rubocop-performance
+  - rubocop-rake
+  - rubocop-rspec
+
 AllCops:
   DefaultFormatter: fuubar
   DisplayStyleGuide: true
