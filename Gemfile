@@ -1,11 +1,12 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+# Specify your gem's dependencies in pagy-cursor.gemspec
+gemspec
 
-gem "rails", "~> 7.0.0"
-gem "pg"
-gem "sqlite3"
-# gem "mysql2"
-gem "pry"
-# Specify your gem's dependencies in pagy_cursor.gemspec
-gemspec path: "./"
+gem "rake", "~> 13.0"
+
+gem "rspec", "~> 3.0"
+
+gem "rubocop", "~> 1.21"

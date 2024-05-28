@@ -1,15 +1,6 @@
-ENV["RAILS_ENV"] = "test"
-ENV["DB"] ||= "sqlite3"
-require 'rails/all'
-require "rails/test_help"
-require "pagy_cursor"
-require "dummy/config/environment"
+# frozen_string_literal: true
 
-ActiveRecord::Migration.verbose = false
-ActiveRecord::Tasks::DatabaseTasks.drop_current 'test'
-ActiveRecord::Tasks::DatabaseTasks.create_current 'test'
-ActiveRecord::Migration.maintain_test_schema!
-
+require "pagy/cursor"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -21,11 +12,4 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
-end
-
-
-class TestController
-  include Pagy::Backend
-
-  attr_reader :params
 end

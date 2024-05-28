@@ -1,84 +1,39 @@
+# Pagy::Cursor
 
-# PagyCursor
+TODO: Delete this and the text below, and describe your gem
 
-Extra [Pagy](https://github.com/ddnexus/pagy) to work with cursor pagination
-
+Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pagy/cursor`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
 
-```ruby
-gem 'pagy_cursor'
-```
+Install the gem and add to the application's Gemfile by executing:
 
-And then execute:
+    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
 
-    $ bundle install
+If bundler is not being used to manage dependencies, install the gem by executing:
+
+    $ gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
 
 ## Usage
 
-Include the backend in some controller:
+TODO: Write usage instructions here
 
-```ruby
-require "pagy_cursor/pagy/extras/cursor"
-require "pagy_cursor/pagy/extras/uuid_cursor"
+## Development
 
-include Pagy::Backend
-```
-Default
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-```ruby
-pagy_cursor(Post.all)
-```
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
-Before and After
+## Contributing
 
-```ruby
-pagy_cursor(Post.all, after: 10)
-pagy_cursor(Post.all, before: 10)
-```
-
-With UUID
-
-```ruby
-pagy_uuid_cursor(Post.all, after: "ce5d2741-4e52-49b2-bb76-c41b67ab3aad")
-pagy_uuid_cursor(Post.all, before: "ce5d2741-4e52-49b2-bb76-c41b67ab3aad")
-```
-
-Ordering collection
-```ruby
-pagy_cursor(Post.all, after: 10, order: {updated_at: :desc})
-```
-
-## Credits
-
-Many thanks to:
-- [Uysim](https://github.com/Uysim)
-- [Hirokazu Hata](https://github.com/h-michael)
-- [M. Yunan Helmy](https://github.com/yunanhelmy)
-- [Eumir Gaspar](https://github.com/corroded)
-
-## Support Databases
-
-- SQLite
-- Postgresql
-- MySQL
-
-## Tests & Contributing
-
-To run tests in root folder of gem:
-
-- ```export DB=sqlite3``` to work with sqlite (see [support databases](#support-databases))
-- ```bundle install```
-- ```bundle exec rspec ```
-
-To test on specific Rails version
-```export BUNDLE_GEMFILE=gemfiles/active_record_70.gemfile``` to work with Rails 7
-
-To play with app cd test/dummy and rails s -b 0.0.0.0 (before rails db:migrate).
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/pagy-cursor. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/pagy-cursor/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## Code of Conduct
+
+Everyone interacting in the Pagy::Cursor project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/pagy-cursor/blob/main/CODE_OF_CONDUCT.md).
